@@ -1,9 +1,8 @@
 /* 
     Created by Jakob S. Peters @STEP Network
-    Date: 05.12.2024 (dd/mm/yyyy)
+    Creation date: 05.12.2024 (dd/mm/yyyy)
     Last update: 05.12.2024 (dd/mm/yyyy)
-    For free use
-
+    
     ## To do's ##
     - When update from HIJS team with format events is aviable, add format events to tracking
     - Setup custom tracking into AY, so we can do RUM data and not only DebugBear Crawls
