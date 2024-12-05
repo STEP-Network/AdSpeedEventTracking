@@ -108,9 +108,3 @@ window.showEventLog = () => {
     console.table(eventLog);
     console.log('Event log table displayed manually.');
 };
-
-// Display the complete event log as a table when the window unloads
-window.addEventListener("beforeunload", () => {
-    console.table(eventLog);
-});
-
