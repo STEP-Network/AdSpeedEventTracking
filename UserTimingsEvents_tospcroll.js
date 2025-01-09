@@ -4,7 +4,7 @@
     Last update: 05.12.2024 (dd/mm/yyyy)
     
     ## To do's ##
-    - When update from HIJS team with format events is aviable, add format events to tracking
+    - When update from HIJS team with format events is available, add format events to tracking
     - Setup custom tracking into AY, so we can do RUM data and not only DebugBear Crawls
     - Create readme docs and FAQ for AdOps, e.g. event window.showEventLog();
     - Expand to other Adnami and HIJS formats and being able to differenaite between midscrolls and topscrolls. 
@@ -36,8 +36,9 @@ const logEventWithTimeline = (eventName, eventInfo, source) => {
     });
 
     // Add performance marks for specific events
-    if (source === "GPT.js" && eventName === "Ad Slot Requested" && eventInfo.includes("div-gpt-ad-topscroll")) {
+    if (source === "GPT.js" && eventName === "Ad Slot Requested" && eventInfo.includes("interstitial")) {
         performance.mark("topscroll_gpt_ad_slot_requested");
+
     } else if (source === "GPT.js" && eventName === "Ad Impression Rendered" && eventInfo.includes("div-gpt-ad-topscroll")) {
         performance.mark("topscroll_gpt_ad_slot_rendered");
     } else if (source === "HIJS" && eventName === "AD_RENDERED") {
@@ -108,3 +109,5 @@ window.showEventLog = () => {
     console.table(eventLog);
     console.log('Event log table displayed manually.');
 };
+
+
